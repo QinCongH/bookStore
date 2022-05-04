@@ -2,7 +2,6 @@
 	<view class="content">
 		首页
 		<button type="default" @click="getData()">
-			测试
 		</button>
 	</view>
 </template>
@@ -15,20 +14,9 @@
 			}
 		},
 		methods: {
-			getData() {
-				this.$api.getGoods().then(res=>{
-					console.log(res)
-				}).catch(err=>{
-					console.log(err)
-				})
-			}
+
 		},
 		onLoad() {
-			this.$api.getIndex().then(res=>{
-				console.log(res)
-			}).catch(err=>{
-				console.log(err)
-			})
 		}
 	}
 </script>
