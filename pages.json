@@ -1,15 +1,65 @@
 {
 	"easycom": {
-	    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/commodity/commodity",
+			"style": {
+				"navigationBarTitleText": "商品"
+			}
+		},
+		{
+			"path": "pages/car/car",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "rgb(230 112 97)",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/iconfont/home.svg",
+				"selectedIconPath": "static/iconfont/home1.svg",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/commodity/commodity",
+				"iconPath": "static/iconfont/commodity.svg",
+				"selectedIconPath": "static/iconfont/commodity1.svg",
+				"text": "商品"
+			},
+			{
+				"pagePath": "pages/car/car",
+				"iconPath": "static/iconfont/cart.svg",
+				"selectedIconPath": "static/iconfont/cart1.svg",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/iconfont/Person.svg",
+				"selectedIconPath": "static/iconfont/Person1.svg",
+				"text": "我的",
+				"iconfont": {
+				}
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

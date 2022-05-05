@@ -1,50 +1,52 @@
 <template>
-	<view class="content">
-		首页
-		<button type="default" @click="getData()">
-		</button>
+	<view>
+		<u-swiper :list="imgList">
+
+		</u-swiper>
+		<u-tabs :list="tabList" :is-scroll="false" :current="current" @change="change" :bar-width="70"
+			active-color="#e67061">
+
+		</u-tabs>
+
+		<index-content/>
 	</view>
 </template>
 
 <script>
+	import IndexContent from '../../components/index/IndexContent.vue'
 	export default {
 		data() {
 			return {
-
+				imgList: [
+					'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+					'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+					'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+				],
+				tabList: [{
+					name: '默认'
+				}, {
+					name: '销量'
+				}, {
+					name: '推荐',
+				}, {
+					name: '最新'
+				}],
+				current: 0
 			}
 		},
-		methods: {
-
+		components: {
+			IndexContent
 		},
-		onLoad() {
-		}
+		methods: {
+			change(index) {
+				// console.log(index)
+				this.current = index;
+			}
+		},
+		onLoad() {}
 	}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
 </style>
