@@ -3,9 +3,8 @@
 		<u-swiper :list="imgList">
 
 		</u-swiper>
-		<u-tabs :list="tabList" :is-scroll="false" :current="current" @change="change" :bar-width="70"
+		<u-tabs :list="tabList" :is-scroll="false" :current="current"  @change="change" :bar-width="70"
 			active-color="#e67061">
-
 		</u-tabs>
 
 		<index-content/>

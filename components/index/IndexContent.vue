@@ -32,6 +32,7 @@
     .indexContent {
 		justify-content: space-between;
 		padding: 0px 5px;
+		height: 100px;
 	}
 
 	.flex {
